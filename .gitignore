@@ -1,0 +1,4 @@
+## ignore this file ##
+*.o
+*.so
+timerService_test

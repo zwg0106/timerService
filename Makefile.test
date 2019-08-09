@@ -1,0 +1,17 @@
+OBJ:=timerService_test.o
+CFLAGS:=-fPIC -c -Wall -O -g
+TARGET=timerService_test
+LIB=-ltimerService
+
+all:$(TARGET)
+
+$(TARGET):$(OBJ)
+	$(CC) -o $@ $(OBJ) -L./ $(LIB) 
+
+$(OBJ):%.o:%.c
+	$(CC) $(CFLAGS) $< -o $@
+
+.PHONY:clean
+clean:
+	rm -rf $(OBJ) $(TARGET)
+
