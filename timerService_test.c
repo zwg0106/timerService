@@ -56,7 +56,7 @@ static void TestTimer(unsigned int sec, unsigned long usec, tsTest_t * pDsc)
     {
         pDsc->b.type       = ONCE_TIMER;
     }
-    rc = startTimerEvt( &pDsc->b );
+    rc = startTimerEvt(&pDsc->b);
 	if(rc)
 	{
 		fprintf(stderr, "Failed to create timer %s\n", pDsc->b.name);
